@@ -67,10 +67,7 @@ class FoodController extends Controller
             'spicy_level' => 'required|numeric',
             'price' => 'required|numeric',
         ]);
-
-        // ini yang agak ngawur gara gara gabisa updatee wkwk
-        $fileName = 'fotomenu.jpeg';
-
+        
         if ($req->hasFile('image')) {
             $file = $req->file('image');
             $fileName = $file->getClientOriginalName();
